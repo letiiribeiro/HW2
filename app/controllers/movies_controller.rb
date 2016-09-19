@@ -11,13 +11,14 @@ class MoviesController < ApplicationController
     sort = params[:sort_by]
     ratings = params["ratings"]
     
-    if(!sort)
-      @movies = Movie.all
-    elsif sort == "title"
-      @movies = Movie.order(:title)
-    elsif sort == "release_date"
-      @movies = Movie.order(:release_date)
-    end
+    #logica do ex 1 
+    #if(!sort)
+    #  @movies = Movie.all
+    #elsif sort == "title"
+    #  @movies = Movie.order(:title)
+    #elsif sort == "release_date"
+    #  @movies = Movie.order(:release_date)
+    #end
     
     if(!ratings)
       filter = @all_ratings
